@@ -2,6 +2,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import { useLocalStorage } from './hooks/useLocalStorage';
+import Hero from './components/Hero';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useLocalStorage("darkmode", false)
@@ -20,11 +21,11 @@ function App() {
   return (
     <>
     <div className = {(isDarkMode ? "dark": "")}>
-    <div className = "px-32 dark:bg-dm-color dark:text-blue-100 h-screen">
+    <div className = "px-64 dark:bg-dm-color dark:text-blue-100 h-screen">
      <header>
-        <div className = "flex justify-end pb-8 pt-2">
+        <div className = "flex justify-end pb-8 pt-4 text-lg">
         <Form className = "mx-2">
-          <FormGroup switch>
+          <FormGroup switch >
           <Label check>{isDarkMode ? "LIGHT": "DARK"} MODE
             <Input type="switch" 
             role="switch"
@@ -34,26 +35,22 @@ function App() {
           </FormGroup>
         </Form>
         <p className = "mx-2">|</p>
-        <p className = "mx-2">Dil Seçeneği (Placeholder)</p>
+        <p className = "mx-2">TÜRKÇE'YE GEÇ</p>
+        </div>
+        <div className = " text-xl flex justify-start">
+          <p className = "dark:text-blue-100 dark:bg-indigo-600 text-2xl text-indigo-600 font-medium bg-blue-100 px-6 py-3 border-solid rounded-full rotate-12">B</p>
+          <div className = "flex grow justify-end">
+            <nav>
+              <a className = "pr-12" href="">Skills</a>
+              <a className = "pr-20 pl-12" href="">Projects</a>
+              <a className = "dark:bg-blue-100 dark:border-blue-100 font-medium text-indigo-800 py-2 px-4 border-solid border-2 border-indigo-600 rounded-lg" href="">Hire me</a>
+            </nav>
+          </div>
         </div>
       </header>
-      {/*Aşağısı Dark Mode Testi için, işi bittikten sonra silebilirsin*/}
-  <div className = "my-12 flex flex-row">
-    <div className = "mr-48">
-        <h1 className="font-bold underline my-12 text-7xl ml-12">
-          WELCOME TO MY PROJECT
-        </h1>
-        <p className="font-bold underline my-12 text-3xl ml-12">Project has been building...</p>
-      </div>
-
-      <div className = "ml-24 my-4">
-        <p className = "mb-2">What a magnificent image</p>
-        <img
-          alt="Sample"
-          src="https://picsum.photos/300/200"
-        />
-        </div>
-    </div>
+      <section className = "hero-section">
+        <Hero/>
+      </section>
     </div>
     </div>
     </>
