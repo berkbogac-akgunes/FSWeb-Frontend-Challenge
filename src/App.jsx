@@ -3,8 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import Hero from './components/Hero';
+import Skills from './components/Skills';
 import { useContext } from 'react';
 import { LanguageContext } from './contexts/LanguageContext';
+import Profile from './components/Profile';
+import Projects from './components/Projects';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useLocalStorage("darkmode", false)
@@ -23,7 +26,7 @@ function App() {
   return (
     <>
     <div className = {(isDarkMode ? "dark": "")}>
-    <div className = "px-64 dark:bg-dm-color dark:text-blue-100 h-screen">
+    <div className = "px-64 dark:bg-dm-color dark:text-blue-100 h-max">
      <header>
         <div className = "flex justify-end pb-8 pt-4 text-lg">
         <Form className = "mx-2">
@@ -52,6 +55,15 @@ function App() {
       </header>
       <section className = "hero-section">
         <Hero/>
+      </section>
+      <section className = "skills-section">
+        <Skills/>
+      </section>
+      <section className = "profile-section">
+        <Profile/>
+      </section>
+      <section className = "projects-section">
+        <Projects/>
       </section>
     </div>
     </div>
