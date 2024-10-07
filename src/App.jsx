@@ -3,10 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import Hero from './components/Hero';
+import { useContext } from 'react';
+import { LanguageContext } from './contexts/LanguageContext';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useLocalStorage("darkmode", false)
-  console.log(isDarkMode)
+  const { pageLanguage, translation, languageClickHandler } = useContext(LanguageContext)
 
   function toggleDarkMode() {
     if (isDarkMode) {
@@ -26,7 +28,7 @@ function App() {
         <div className = "flex justify-end pb-8 pt-4 text-lg">
         <Form className = "mx-2">
           <FormGroup switch >
-          <Label check>{isDarkMode ? "LIGHT": "DARK"} MODE
+          <Label check>{isDarkMode ? translation.light: translation.dark} {translation.mode}
             <Input type="switch" 
             role="switch"
             onClick = {toggleDarkMode}
@@ -35,15 +37,15 @@ function App() {
           </FormGroup>
         </Form>
         <p className = "mx-2">|</p>
-        <p className = "mx-2">TÜRKÇE'YE GEÇ</p>
+        <a onClick = {languageClickHandler} className = "mx-2">{pageLanguage === "en" ? "TÜRKÇE'YE GEÇ": "SWITCH TO ENGLISH" }</a>
         </div>
         <div className = " text-xl flex justify-start">
           <p className = "dark:text-blue-100 dark:bg-indigo-600 text-2xl text-indigo-600 font-medium bg-blue-100 px-6 py-3 border-solid rounded-full rotate-12">B</p>
           <div className = "flex grow justify-end">
             <nav>
-              <a className = "pr-12" href="">Skills</a>
-              <a className = "pr-20 pl-12" href="">Projects</a>
-              <a className = "dark:bg-blue-100 dark:border-blue-100 font-medium text-indigo-800 py-2 px-4 border-solid border-2 border-indigo-600 rounded-lg" href="">Hire me</a>
+              <a className = "pr-12" href="">{translation.skills}</a>
+              <a className = "pr-20 pl-12" href="">{translation.projects}</a>
+              <a className = "dark:bg-blue-100 dark:border-blue-100 font-medium text-indigo-800 py-2 px-4 border-solid border-2 border-indigo-600 rounded-lg" href="">{translation.hireMe}</a>
             </nav>
           </div>
         </div>
