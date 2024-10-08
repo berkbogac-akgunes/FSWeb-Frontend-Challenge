@@ -1,6 +1,7 @@
 export default function Profile() {
     return(
         <>
+        <div className = "px-64">
         <h2 className = "text-6xl mb-10 text-gray-800 dark:text-[#AEBCCF] font-semibold">Profile</h2>
         <section className = "flex">
             <div className = "profile-container pr-28">
@@ -32,6 +33,7 @@ export default function Profile() {
             </div>
         </section>
         <hr className="h-px my-8 bg-gray-700 border-0 dark:bg-gray-400"></hr>
+        </div>
         </>
     )
 }

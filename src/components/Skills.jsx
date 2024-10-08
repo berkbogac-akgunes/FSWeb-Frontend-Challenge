@@ -3,7 +3,7 @@
 export default function Skills() {
     return(
         <>
-        <section className = "">
+        <section className = "px-64">
             <h2 className = "text-6xl mb-8 text-gray-800 dark:text-[#AEBCCF] font-semibold">Skills</h2>
             <div className = "skill-cards flex justify-between">
                 <div className = " mr-14">

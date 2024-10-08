@@ -1,7 +1,7 @@
 export default function Projects() {
     return(
         <>
-          <section>
+          <section className = "px-64">
             <h2 className = "text-6xl mb-8 text-gray-800 dark:text-[#AEBCCF] font-semibold">Projects</h2>
             <div className = "flex justify-between">
               <div>

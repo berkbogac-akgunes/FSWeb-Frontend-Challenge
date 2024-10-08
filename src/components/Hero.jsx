@@ -9,7 +9,7 @@ export default function Hero() {
 
     return(
         <>
-        <section className = "my-24">
+        <section className = "px-64 my-24">
             <div className = "flex">
                 <hr className="w-32 h-px my-8 bg-blue-900 border-2 rounded dark:bg-indigo-800"/>
                 <p className= "pt-3 pl-2 text-xl text-indigo-600 font-medium dark:text-indigo-200">Berk Boğaç Akgüneş</p>

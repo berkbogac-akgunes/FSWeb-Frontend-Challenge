@@ -27,8 +27,8 @@ function App() {
   return (
     <>
     <div className = {(isDarkMode ? "dark": "")}>
-    <div className = "px-64 dark:bg-dm-color dark:text-blue-100 h-max">
-     <header>
+    <div className = "dark:bg-dm-color dark:text-blue-100 h-max">
+     <header className = "px-64">
         <div className = "flex justify-end pb-8 pt-4 text-lg">
         <Form className = "mx-2">
           <FormGroup switch >

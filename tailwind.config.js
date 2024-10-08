@@ -8,6 +8,9 @@ export default {
     extend: {
       spacing: {
         '88': '21.5rem',
+        "work-together": "42rem",
+        "mail": "18.5rem",
+        "footer": "30rem",
       },
       colors: {
         "dm-color": "#252128"
