@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { LanguageContext } from './contexts/LanguageContext';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useLocalStorage("darkmode", false)
@@ -64,6 +65,9 @@ function App() {
       </section>
       <section className = "projects-section">
         <Projects/>
+      </section>
+      <section className = "footer-section">
+        <Footer/>
       </section>
     </div>
     </div>

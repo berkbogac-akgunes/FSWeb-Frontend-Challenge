@@ -2,10 +2,16 @@
     border: 1px solid black;
 }
 
-img {
-    width: 550px;
+.hero-image {
+    width: 35rem;
     height: auto;
     border-radius: 30px;
     margin-left: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    width: 21rem;
+    height: auto;
     margin-bottom: 2rem;
 }

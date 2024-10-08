@@ -19,7 +19,7 @@ export default function Hero() {
                     <h1 className = "dark:text-indigo-100 text-8xl text-gray-800 font-bold flex flex-wrap w-12/12">{translation.heroHeading}</h1>
                     <p className = "mt-12 dark:text-gray-100 text-xl text-gray-600 flex flex-wrap w-10/12">{translation.heroSelf}</p>
                 </div>
-                <img title = "minimalism" src = "https://wallpapers.com/images/high/minimalist-best-laptop-for-coding-glt27d3cmfygaipy.webp"/>
+                <img className = "hero-image" title = "minimalism" src = "https://wallpapers.com/images/high/minimalist-best-laptop-for-coding-glt27d3cmfygaipy.webp"/>
             </div>
             <div className = "pb-4">
                 <nav>

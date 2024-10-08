@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: {
+        '88': '21.5rem',
+      },
       colors: {
         "dm-color": "#252128"
       }
